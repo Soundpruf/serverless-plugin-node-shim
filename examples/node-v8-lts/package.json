@@ -1,0 +1,18 @@
+{
+  "name": "serverless-plugin-node-shim-example-node-v8-lts",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "postinstall":
+      "curl 'https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz' | tar xf -",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "sls deploy",
+    "invoke": "sls invoke -f hello"
+  },
+  "author": "Jan Zimmek",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.26.0",
+    "serverless-plugin-node-shim": "file://../../"
+  }
+}

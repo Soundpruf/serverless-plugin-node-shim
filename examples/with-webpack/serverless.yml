@@ -1,0 +1,21 @@
+service: serverless-plugin-node-shim-demo
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+plugins:
+  - serverless-webpack
+  - serverless-plugin-node-shim
+
+custom:
+  nodeShim:
+    execPath: node-v9.5.0-linux-x64/bin/node
+
+functions:
+  hello:
+    handler: src/handler.hello
+  world:
+    handler: src/handler.world
+  other:
+    handler: src/other.other
