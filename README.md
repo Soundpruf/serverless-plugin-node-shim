@@ -19,13 +19,13 @@ plugins:
   - serverless-plugin-node-shim
 ```
 
-Download and extract a x64 linux binary from https://nodejs.org/en/download/
+Download and extract a x64 linux binary from https://nodejs.org/en/download/ into your project root
 
 ```bash
 $ curl 'https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz' | tar xf -
 ```
 
-Let the plugin know where to find for your nodejs binary
+Let the plugin know the path to your nodejs binary (relative to project root)
 
 ```yaml
 custom:
