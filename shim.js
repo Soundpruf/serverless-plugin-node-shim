@@ -1,5 +1,5 @@
 if (process.send === undefined) {
-  const execPath = __dirname + "/../BINARY";
+  const execPath = __dirname + "/../EXEC_PATH";
 
   // TODO: max-executable-size
   // [

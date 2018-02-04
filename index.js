@@ -15,6 +15,8 @@ class NodeShimPlugin {
   }
 
   transform() {
+    this.serverless.cli.log("Applying node-shim...");
+
     return new Promise((resolve, reject) => {
       const { servicePath } = this.serverless.config,
         nodeShimDir = path.join(servicePath, ".serverless/node-shim"),
@@ -83,8 +85,8 @@ class NodeShimPlugin {
               zip.append(
                 shimCode
                   .replace(
-                    /BINARY/g,
-                    this.serverless.service.custom.nodeShim.binary
+                    /EXEC_PATH/g,
+                    this.serverless.service.custom.nodeShim.execPath
                   )
                   .replace(
                     /HANDLERS/g,
@@ -105,7 +107,13 @@ class NodeShimPlugin {
                 name: file.replace(/\.js$/, "-shimmed.js")
               });
             } else {
-              zip.file(file, { name: file });
+              zip.append(fs.readFileSync(fullPath), {
+                name: file,
+                mode: 16877,
+                // TODO: pass mode as 755
+                // https://github.com/archiverjs/node-compress-commons/blob/master/lib/archivers/zip/constants.js#L49
+                stats: stat
+              });
             }
           });
 
@@ -115,7 +123,7 @@ class NodeShimPlugin {
         zip.on("error", reject);
 
         output.on("close", () => {
-          fs.removeSync(nodeShimDir);
+          // fs.removeSync(nodeShimDir);
           resolve(artifactFile);
         });
       });
