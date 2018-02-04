@@ -2,3 +2,4 @@
 node_modules
 jspm_packages
 examples/node-*/node-*
+examples/with-*/node-*
