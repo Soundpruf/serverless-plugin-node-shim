@@ -1,6 +1,6 @@
 {
   "name": "serverless-plugin-node-shim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description":
     "Serverless plugin to run your functions in any nodejs version (8 LTS, 9+) on aws lambda",
   "main": "index.js",
