@@ -12,6 +12,19 @@
   "devDependencies": {
     "@types/fs-extra": "^5.0.0"
   },
+  "keywords": [
+    "serverless",
+    "serverless framework",
+    "serverless plugin",
+    "aws lambda",
+    "aws",
+    "lambda",
+    "nodejs",
+    "shim",
+    "aws lambda node 9",
+    "aws lambda node 8",
+    "aws lambda node"
+  ],
   "dependencies": {
     "glob": "^7.1.2",
     "unzip2": "^0.2.5",
