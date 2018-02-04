@@ -39,27 +39,36 @@ custom:
 
 ```bash
 git clone https://github.com/jzimmek/serverless-plugin-node-shim
-cd serverless-plugin-node-shim/examples/node-v8-lts
+cd serverless-plugin-node-shim
+npm install
+cd examples/node-v8-lts
 npm install
 npm run deploy
+npm run invoke
 ```
 
 [NodeJS 9](https://github.com/jzimmek/serverless-plugin-node-shim/tree/master/examples/node-v9)
 
 ```bash
 git clone https://github.com/jzimmek/serverless-plugin-node-shim
-cd serverless-plugin-node-shim/examples/node-v9
+cd serverless-plugin-node-shim
+npm install
+cd examples/node-v9
 npm install
 npm run deploy
+npm run invoke
 ```
 
 [serverless-webpack + NodeJS 9](https://github.com/jzimmek/serverless-plugin-node-shim/tree/master/examples/with-webpack)
 
 ```bash
 git clone https://github.com/jzimmek/serverless-plugin-node-shim
-cd serverless-plugin-node-shim/examples/with-webpack
+cd serverless-plugin-node-shim
+npm install
+cd examples/with-webpack
 npm install
 npm run deploy
+npm run invoke
 ```
 
 ## Credits
